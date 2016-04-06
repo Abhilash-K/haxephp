@@ -1,102 +1,56 @@
 package ;
 
-import jQuery.*;
+import php.Lib;
+import haxe.Http;
 
 /**
  * @author Matthijs Kamstra aka [mck]
  */
 class Main
 {
-
-	private var currentOffset:Int = 0;
-
-	private var _doc = js.Browser.document;
-	private var _win = js.Browser.window;
-
-
 	function new()
 	{
-		//when document is ready
-		new JQuery(function():Void 
-		{ 
-			//your magic
-			trace ("NASA images");
-
-			buildUI();
-
-			// Ajax
-			JQuery._static.ajax({
-				url: "https://api.nasa.gov/planetary/apod",
-				data: {
-					date : randomDate(),
-					concept_tags: "True",
-					api_key : "DEMO_KEY"
-				},
-				success: function( data ) {
-					trace ("data.url : " + data.url );
-					trace ("data.media_type : " + data.media_type);
-					trace ("data.explanation : " + data.explanation);
-					trace ("data.concepts : " + data.concepts);
-					trace ("data.title : " + data.title);
-
-
-					new JQuery( "#nasa-container" ).html( "<h2>"+data.title+"</h2><img src='" + data.url + "' alt='"+data.title+"' class='img-responsive center-block' ><p>"+data.explanation+"</p>" );
-
-					new JQuery (".back-in-time").click(onClickHandler);
-					
-				}
-			});
-		});
+		getUrl('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${getCurrentDate()}',false);				
 	}
 
-	public function buildUI() 
+	function getUrl(url:String, isPost : Bool = false) : Void
 	{
-		// <div class="container"></div>
-		var _div = _doc.createDivElement();
-		_div.className = "container";
-		_doc.body.appendChild(_div);
+		var req = new haxe.Http( url );
+		
+		req.onData = function (data : String)
+		{
+			try {
+				var json : NasaData = haxe.Json.parse(data);
+				showImage(json);
+			} catch (e:Dynamic){
+				trace(e);
+			}
+		}
 
-		// h2
-		var _h2 = _doc.createElement('h2');
-		_h2.innerText = "NASA";
-		_div.appendChild(_h2);
+		req.onError = function (error : String)
+		{
+			trace('error: $error');
+		}
 
-		// link
-		var _ahref = _doc.createAnchorElement();
-		_ahref.href = "https://api.nasa.gov/api.html#apod";
-		_ahref.appendChild (_doc.createTextNode("https://api.nasa.gov/api.html#apod"));
+		req.onStatus = function (status : Int)
+		{
+			// trace('status: $status');
+		}
 
-		trace (_ahref);
-
-		var _p = _doc.createParagraphElement();
-		_p.innerText = "Thx to NASA for suppling there open API ("+ _ahref +")";
-		_div.appendChild(_p);
-
-		var _image = _doc.createDivElement();
-		_image.id = "nasa-container";
-		_image.appendChild(_doc.createTextNode("This text will replaced with an image"));
-		_div.appendChild(_image);
-
-		var _btn = _doc.createButtonElement();
-		_btn.innerText = "back in time";
-		_btn.className = "back-in-time";
-		_div.appendChild(_btn);
-
-		_div.appendChild(_doc.createComment(".container"));	
+		req.request( isPost ); // false=GET, true=POST
 	}
 
-	function onClickHandler(e)
+	function showImage(data:NasaData)
 	{
-		trace('go back in time');
+		php.Lib.print('<img src="${data.hdurl}" alt="${data.title}">');
 	}
 
-	function randomDate():String
+	function getCurrentDate():String
 	{
 		var date = Date.now();
 		var year = date.getFullYear();
-		var month = date.getMonth()+1; // start from zero
+		var month = date.getMonth()+1;
 		var day = date.getDate();
-		// return "1999-01-01";
 		return year + "-" + StringTools.lpad (Std.string(month),"0",2) + "-" + StringTools.lpad (Std.string(day),"0",2);
 	}
 
@@ -104,4 +58,15 @@ class Main
     {
         var main = new Main();
 	}
+}
+
+typedef NasaData = 
+{
+	var date : String; //2016-04-06, 
+	var explanation : String; //Jupiter has auroras. Like near the Earth, the magnetic field of our Solar System's largest planet compresses when impacted by a gust of charged particles from the Sun. This magnetic compression funnels charged particles towards Jupiter's poles and down into the atmosphere. There, electrons are temporarily excited or knocked away from atmospheric gases, after which, when de-exciting or recombining with atmospheric ions, auroral light is emitted. The featured illustration portrays the magnificent magnetosphere around Jupiter in action. In the inset image released last month, the Earth-orbiting Chandra X-ray Observatory shows unexpectedly powerful X-ray light emitted by Jovian auroras, depicted in false-colored purple. That Chandra inset is superposed over an optical image taken at a different time by the Hubble Space Telescope. This aurora on Jupiter was seen in October 2011, several days after the Sun emitted a powerful Coronal Mass Ejection (CME)., 
+	var hdurl : String ;// http://apod.nasa.gov/apod/image/1604/JupiterMagnetosphere_JAXA_3500.jpg, 
+	var media_type : String; //image, 
+	var service_version :  String; //v1, 
+	var title : String; //Auroras and the Magnetosphere of Jupiter, 
+	var url : String; //http://apod.nasa.gov/apod/i
 }

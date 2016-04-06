@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Resources | Haxe and PHP</title>
+        <title>How to | Haxe and PHP</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../00helloworld/about.html" />
+    <link rel="next" href="../follow.html" />
     
     
-    <link rel="prev" href="../haxephp/download.html" />
+    <link rel="prev" href="../06nasa/about.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.3" data-basepath=".." data-revision="Wed Apr 06 2016 22:02:55 GMT+0200 (CEST)">
+    <div class="book" data-level="7.1" data-basepath=".." data-revision="Wed Apr 06 2016 22:02:55 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -212,7 +212,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="haxephp/resource.html">
+        <li class="chapter " data-level="3.3" data-path="haxephp/resource.html">
             
                 
                     <a href="../haxephp/resource.html">
@@ -356,7 +356,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.1" data-path="06nasa/example.html">
+        <li class="chapter active" data-level="7.1" data-path="06nasa/example.html">
             
                 
                     <a href="../06nasa/example.html">
@@ -586,19 +586,68 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/haxephp/resource.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="resources">Resources</h1>
-<p>You can find more information regarding the core language API, here: <a href="http://api.haxe.org/php/" target="_blank">http://api.haxe.org/php/</a></p>
-<h2 id="haxe-org-javascript">haxe.org JavaScript</h2>
-<p>Read more about Haxe and JavaScript in the manual:
-<a href="http://haxe.org/manual/target-php.html" target="_blank">http://haxe.org/manual/target-php.html</a></p>
-<h2 id="php">PHP?</h2>
-<p>PHP itself is beyond the scope of this resource - it is assumed that you already are familiar with it, and you are here to learn about the Haxe PHP target.</p>
-<p>The following resources are worth checking out as a refresher:</p>
-<ul>
-<li><a href="http://learnxinyminutes.com/docs/php/" target="_blank">http://learnxinyminutes.com/docs/php/</a></li>
-<li><a href="http://www.w3schools.com/php/default.asp" target="_blank">http://www.w3schools.com/php/default.asp</a></li>
-</ul>
-<p>All you learn from these resources about PHP is appliable here! </p>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/06nasa/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="example-nasa">Example Nasa</h1>
+<p>Check the <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/06nasa/code" target="_blank">code folder</a> for more comments.</p>
+<p>This is an NASA api example.
+You can get an api key if you plan to use it a lot and that is without a price.
+But it also works without one.</p>
+<p><em>The code used in this example can be found <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/06nasa/code" target="_blank">here</a>.</em></p>
+<h2 id="how-to-start">How to start</h2>
+<p>Create a folder named <strong><a href="../GLOSSARY.html#foobar" class="glossary-term" title="The terms foobar, fubar, or foo, bar, baz and qux (alternatively, quux) and sometimes norf and many others are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.">foobar</a></strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + bin
+    + src
+        - Main.hx
+    - php.hxml
+</code></pre><h2 id="the-main-hx">The Main.hx</h2>
+<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder. 
+Check the complete <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/06nasa/code/src/Main.hx" target="_blank">Main.hx</a>.</p>
+<p>This is the most interesting part:</p>
+<pre><code>var req = new haxe.Http( &apos;https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&apos; );
+
+req.onData = function (data : String)
+{
+    try {
+        var json haxe.Json.parse(data);
+        trace(json);
+    } catch (e:Dynamic){
+        trace(e);
+    }
+}
+
+req.onError = function (error : String)
+{
+    trace(&apos;error: $error&apos;);
+}
+
+req.onStatus = function (status : Int)
+{
+    // trace(&apos;status: $status&apos;);
+}
+
+req.request( false ); // false=GET, true=POST
+</code></pre><h2 id="the-haxe-build-file-php-hxml">The Haxe build file, php.<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a></h2>
+<p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
+These arguments can also be placed into a text file of one per line with the extension <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>. This file can then be passed directly to the Haxe compiler as a build script.</p>
+<pre><code># // php.hxml
+-cp src
+-main Main
+-php bin/www
+-dce full
+</code></pre><h2 id="build-js-with-haxe">Build js with Haxe</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a></li>
+<li><code>cd</code> to the correct folder where you have saved the <code>php.hxml</code> </li>
+<li>type <code>haxe php.hxml</code></li>
+<li>press enter</li>
+</ol>
+<p>You could build everything directly in the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a>.</p>
+<pre><code>haxe -cp src -main Main -js bin/www -dce full
+</code></pre><p>It will have the same result</p>
 
                     
                     </section>
@@ -609,10 +658,10 @@
         </div>
 
         
-        <a href="../haxephp/download.html" class="navigation navigation-prev " aria-label="Previous page: Download"><i class="fa fa-angle-left"></i></a>
+        <a href="../06nasa/about.html" class="navigation navigation-prev " aria-label="Previous page: Example Nasa"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../00helloworld/about.html" class="navigation navigation-next " aria-label="Next page: Example Hello World"><i class="fa fa-angle-right"></i></a>
+        <a href="../follow.html" class="navigation navigation-next " aria-label="Next page: Who to follow"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Resources | Haxe and PHP</title>
+        <title>Example Nasa | Haxe and PHP</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../00helloworld/about.html" />
+    <link rel="next" href="../06nasa/example.html" />
     
     
-    <link rel="prev" href="../haxephp/download.html" />
+    <link rel="prev" href="../02webapi/example.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.3" data-basepath=".." data-revision="Wed Apr 06 2016 22:02:55 GMT+0200 (CEST)">
+    <div class="book" data-level="7" data-basepath=".." data-revision="Wed Apr 06 2016 22:02:55 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -212,7 +212,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="haxephp/resource.html">
+        <li class="chapter " data-level="3.3" data-path="haxephp/resource.html">
             
                 
                     <a href="../haxephp/resource.html">
@@ -340,7 +340,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7" data-path="06nasa/about.html">
+        <li class="chapter active" data-level="7" data-path="06nasa/about.html">
             
                 
                     <a href="../06nasa/about.html">
@@ -586,19 +586,33 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/haxephp/resource.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="resources">Resources</h1>
-<p>You can find more information regarding the core language API, here: <a href="http://api.haxe.org/php/" target="_blank">http://api.haxe.org/php/</a></p>
-<h2 id="haxe-org-javascript">haxe.org JavaScript</h2>
-<p>Read more about Haxe and JavaScript in the manual:
-<a href="http://haxe.org/manual/target-php.html" target="_blank">http://haxe.org/manual/target-php.html</a></p>
-<h2 id="php">PHP?</h2>
-<p>PHP itself is beyond the scope of this resource - it is assumed that you already are familiar with it, and you are here to learn about the Haxe PHP target.</p>
-<p>The following resources are worth checking out as a refresher:</p>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/06nasa/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="nasa-api">NASA API</h1>
+<p>If you want to access the information on a website you will need to register yourself as a developer.
+With that key you can get the information you want.</p>
+<p>They do that, because they want to check what you are doing with that information...</p>
+<p>Usually the api-key is not transfarable, and if I would put it up here, I would break the agreement I made with that perticular company.
+So that is bad news for the Ajax calls I want to show.</p>
+<p>So I started looking for an API that could be use <em>without</em> having API-KEY.</p>
+<p>I found it at <a href="https://api.nasa.gov/api.html" target="_blank">NASA</a></p>
+<blockquote>
+<p>You do not need to authenticate in order to explore the NASA data. </p>
+</blockquote>
+<h2 id="demo-key-rate-limits">DEMO_KEY Rate Limits</h2>
+<p>In documentation examples, the special DEMO_KEY api key is used. This API key can be used for initially exploring APIs prior to signing up, but it has much lower rate limits, so you&#x2019;re encouraged to signup for your own API key if you plan to use the API (signup is quick and easy). The rate limits for the DEMO_KEY are:</p>
 <ul>
-<li><a href="http://learnxinyminutes.com/docs/php/" target="_blank">http://learnxinyminutes.com/docs/php/</a></li>
-<li><a href="http://www.w3schools.com/php/default.asp" target="_blank">http://www.w3schools.com/php/default.asp</a></li>
+<li>Hourly Limit: 30 requests per IP address per hour</li>
+<li>Daily Limit: 50 requests per IP address per day</li>
 </ul>
-<p>All you learn from these resources about PHP is appliable here! </p>
+<h2 id="more-easy-to-access-data-from-nasa">More, easy to access, data from NASA</h2>
+<p>I used the <a href="https://api.nasa.gov/api.html#apod" target="_blank">APOD</a> but there is more:</p>
+<ul>
+<li><a href="https://api.nasa.gov/api.html#apod" target="_blank">APOD</a> : beautifull images from space</li>
+<li><a href="https://api.nasa.gov/api.html#earth" target="_blank">Earth</a> : images of earth taken from NASA satelites, with intervals of 16 days</li>
+<li><a href="https://api.nasa.gov/api.html#earth-temperature-anomalies" target="_blank">Earth temperature anomalies</a> : tempuratures on a specific place starting 1880</li>
+<li><a href="https://api.nasa.gov/api.html#patents" target="_blank">Patents</a> : The NASA patent portfolio</li>
+<li><a href="https://api.nasa.gov/api.html#sounds" target="_blank">Sounds</a> : Sounds from space!!! (beta)</li>
+</ul>
+<p>Just keep in mind that there is a limit and if you want to exceed that limit you should ask for a api-key.</p>
 
                     
                     </section>
@@ -609,10 +623,10 @@
         </div>
 
         
-        <a href="../haxephp/download.html" class="navigation navigation-prev " aria-label="Previous page: Download"><i class="fa fa-angle-left"></i></a>
+        <a href="../02webapi/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../00helloworld/about.html" class="navigation navigation-next " aria-label="Next page: Example Hello World"><i class="fa fa-angle-right"></i></a>
+        <a href="../06nasa/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
