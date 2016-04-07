@@ -4,14 +4,11 @@
 #this class wil be used as entry point for your app.
 -main Main
 
-#JavaScript target
--js bin/example.js
+#PHP target
+-php bin/www
 
-#You can use -D source-map-content (requires Haxe 3.1+) to have the .hx 
-#files directly embedded into the map file, this way you only have to 
-#upload it, and it will be always in sync with the compiled .js even if 
-#you modify your .hx files.
-# -D source-map-content
+# template
+-resource src/assets/bootstrap_basic.mtt@bootstrap_basic
 
 #Generate source map and add debug information
 # -debug
@@ -21,3 +18,8 @@
 #"-dce std" : remove unused code in the std lib (default)
 #"-dce full" : remove all unused code
 -dce full
+
+#copy bootstrap into www directory
+# -cmd cp -R src/assets/bootstrap/css bin/www
+# -cmd cp -R src/assets/bootstrap/img bin/www
+# -cmd cp -R src/assets/bootstrap/js bin/www

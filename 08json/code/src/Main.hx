@@ -1,49 +1,48 @@
 package ;
 
-import js.Browser;
+import php.Lib;
 
 class Main 
 {
 
-	private var _json : Dynamic;
-	private var _doc = js.Browser.document;
-	private var _win = js.Browser.window;
+	private var json : Dynamic;
 
 	public function new() 
 	{
-		trace ("json example");
+		//trace ("json example");
 
-		var req = new haxe.Http('assets/users.json');
-		req.onData = function (data : String)
-		{
-			_json = haxe.Json.parse(data);
-			trace ("number of users: " + _json.length);
+		var path = Sys.getCwd() + '/assets/users.json';
+
+		if(sys.FileSystem.exists(path)){
+			var str : String = sys.io.File.getContent(path);
+			json = haxe.Json.parse(str);
+			//trace ("number of users: " + json.length);
 			createList();
+		} else {
+			trace ('ERROR: there is not file: $path');
 		}
-		req.onError = function (error)
-		{
-			Browser.alert('error: $error');
-		}
-		req.request(true);
-
 	}
 
 	private function createList():Void
 	{
-		for (i in 0 ... _json.length)
+		var html = '';
+		html += '<table style="width:100%">';
+		html += '<tr><th>id</th><th>name</th><th>username</th><th>email</th><th>phone</th><th>website</th></tr>';
+		for (i in 0 ... json.length)
 		{
-			var _user : User = _json[i];
-			var _txt = "";
-			_txt += "Name: " + _user.name + "<br>";
-			_txt += "Email: <a href='mailto:" + _user.email + "'>"+_user.email+"</a><br>";
-			_txt += "Phone: " + _user.phone + "<br>";
-
-
-			var _div = _doc.createDivElement();
-			_div.className = "user";
-			_div.innerHTML = _txt;
-			_doc.body.appendChild(_div);
+			var _user : User = json[i];
+			html += '<tr>';
+			html += '<td>${_user.id}</td>';
+			html += '<td>${_user.name}</td>';
+			html += '<td>${_user.username}</td>';
+			html += '<td>${_user.email}</td>';
+			html += '<td>${_user.phone}</td>';
+			html += '<td>${_user.website}</td>';
+			html += '</tr>';
 		}
+		html += '</table>';
+
+		Lib.print(html);
 	}
 
 
