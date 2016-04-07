@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Haxe basics | Haxe and PHP</title>
+        <title>Example json | Haxe and PHP</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../haxe/installation.html" />
+    <link rel="next" href="../08json/example.html" />
     
     
-    <link rel="prev" href="../level.html" />
+    <link rel="prev" href="../06nasa/example.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2" data-basepath=".." data-revision="Thu Apr 07 2016 12:11:40 GMT+0200 (CEST)">
+    <div class="book" data-level="8" data-basepath=".." data-revision="Thu Apr 07 2016 12:11:40 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -85,7 +85,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2" data-path="haxe/about.html">
+        <li class="chapter " data-level="2" data-path="haxe/about.html">
             
                 
                     <a href="../haxe/about.html">
@@ -376,7 +376,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="08json/about.html">
+        <li class="chapter active" data-level="8" data-path="08json/about.html">
             
                 
                     <a href="../08json/about.html">
@@ -622,44 +622,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/haxe/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="what-is-haxe">What is Haxe?</h1>
-<p><img src="../img/haxe_logo.png" alt="Haxe logo"></p>
-<p>Lets get the wikipedia description first:</p>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/08json/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-loading-a-json">About loading a json</h1>
+<p>A very common way of loading data in your web-app is the use of <code>json</code> files.</p>
+<p>Haxe can handle <a href="http://api.haxe.org/haxe/Json.html" target="_blank">json</a> crossplatform </p>
 <blockquote>
-<p>Haxe is an open source high-level multi-platform programming language and compiler that can produce applications and source code for many different platforms from a single code-base.</p>
-<p>Haxe includes a set of common functionality that is supported across all platforms, such as numeric data types, text, arrays, binary and some common file formats. Haxe also includes platform-specific API for Adobe Flash, C++, PHP and other languages.</p>
-<p>Code written in the Haxe language can be source-to-source compiled into ActionScript 3 code, JavaScript programs, Java, C#, C++ standalone applications, Python, PHP, Apache CGI, and Node.js server-side applications.</p>
+<p>Crossplatform JSON API : it will automatically use the optimized native API if available. Use -D haxeJSON to force usage of the Haxe implementation even if a native API is found : this will provide extra encoding features such as enums (replaced by their index) and StringMaps.</p>
 </blockquote>
-<p><em>From <a href="https://en.wikipedia.org/wiki/Haxe" target="_blank">wikipedia</a></em></p>
-<hr>
-<p>And the official description:</p>
-<blockquote>
-<p>Haxe consists of a high-level, open source programming language and a compiler. It allows compilation of programs, written using an ECMAScript-oriented syntax, to multiple target languages. Employing proper abstraction, it is possible to maintain a single code-base which compiles to multiple targets.</p>
-<p>Haxe is strongly typed but the typing system can be subverted where required. Utilizing type information, the Haxe type system can detect errors at compile-time which would only be noticeable at run-time in the target language. Furthermore, type information can be used by the target generators to generate optimized and robust code.</p>
-</blockquote>
-<p><em>From <a href="http://haxe.org/manual/introduction-what-is-haxe.html" target="_blank">haxe.org - manual</a></em></p>
-<hr>
-<h2 id="personal">Personal</h2>
-<p>I have though long if I wanted to add a personal note to the &quot;What is Haxe&quot; section. And what would it add?
-But I think it will give context why, or who is using Haxe.</p>
-<p>I was an ActionScript developer, sadly that language is killed. 
-There is a part of me that could rant about that, but it&apos;s easier just to say &quot;let move on&quot;.</p>
-<p>I originally studied to be a graphic designer, but accidentally discovered that I could do animation pretty good.<br>I started using Flash as an animator and slowly learned how to program in Flash and later in a IDE (SE|PY written in Python if I&apos;m not mistaken).<br>I started to experiment with MTASC (which is the Haxe predecessor) because it compiled faster then Flash did.</p>
-<p>Then Nicolas stopped working on MTASC and focussed on Haxe. He lost me there, I was to junior-dev to understand what he was doing, and at the time nobody around me was interested in it.</p>
-<p>Somewhere it must have grabbed my attention again and I using it (for hobby projects) for ??? years (probably less then 10 years, but more then 5 years)</p>
-<p>From a ActionScript background it&apos;s not difficult at all to work with Haxe. And I guess the same is for JavaScript developers.</p>
-<p>I love the fact that I have one language and with a little work you can export to different targets.</p>
-<p>So I can create a PHP backend without writing PHP (I only have to figure out some stuff that you don&apos;t have in ActionScript)</p>
-<p>With Openfl (written on top of Haxe) I can create IOS, Android and html5 applications in a short time.</p>
-<p>And currently I&apos;m focused on JavaScript and NodeJs.</p>
-<p><a name="2ct"></a></p>
-<h2 id="-my-two-cents-https-en-wikipedia-org-wiki-my-two-cents"><a href="https://en.wikipedia.org/wiki/My_two_cents" target="_blank">My two cents</a></h2>
-<p>My primary reasons to write this documentation is the fact that the focus of Haxe seems to be on games. It&apos;s not strange because <a href="https://twitter.com/ncannasse" target="_blank">Nicolas</a> (original developer of Haxe) earns his money with <a href="http://shirogames.com/" target="_blank">games</a>.</p>
-<p>I think it&apos;s a mistake from the HaxeFoundation not to focus, but let games be the main sound (perhaps it&apos;s not a conscious decision).</p>
-<p>But it&apos;s a big misunderstanding (for the people who don&apos;t know Haxe) and there is little that is done about it.</p>
-<p>We (Haxe) need more people that speak up, about other things then games! </p>
-<p>But it should be more visible, more prominent and more documented to help you with the transition.<br>I hope this documentation will help (a little).</p>
-<hr>
 
                     
                     </section>
@@ -670,10 +638,10 @@ There is a part of me that could rant about that, but it&apos;s easier just to s
         </div>
 
         
-        <a href="../level.html" class="navigation navigation-prev " aria-label="Previous page: Level of Difficulty"><i class="fa fa-angle-left"></i></a>
+        <a href="../06nasa/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../haxe/installation.html" class="navigation navigation-next " aria-label="Next page: Installation"><i class="fa fa-angle-right"></i></a>
+        <a href="../08json/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
