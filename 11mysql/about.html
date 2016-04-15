@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Example json | Haxe and PHP</title>
+        <title>Example MySQL | Haxe and PHP</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../08json/example.html" />
+    <link rel="next" href="../11mysql/example.html" />
     
     
-    <link rel="prev" href="../06nasa/example.html" />
+    <link rel="prev" href="../10sqlite/example.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="11" data-basepath=".." data-revision="Fri Apr 15 2016 22:06:22 GMT+0200 (CEST)">
+    <div class="book" data-level="14" data-basepath=".." data-revision="Fri Apr 15 2016 22:06:22 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -499,7 +499,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="11" data-path="08json/about.html">
+        <li class="chapter " data-level="11" data-path="08json/about.html">
             
                 
                     <a href="../08json/about.html">
@@ -607,7 +607,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14" data-path="11mysql/about.html">
+        <li class="chapter active" data-level="14" data-path="11mysql/about.html">
             
                 
                     <a href="../11mysql/about.html">
@@ -868,47 +868,28 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/08json/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-loading-a-json">About loading a json</h1>
-<p>A very common way of loading data in your web-app is the use of <code>json</code> files.</p>
-<p>Haxe can handle <a href="http://api.haxe.org/haxe/Json.html" target="_blank">json</a> cross-platform </p>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/11mysql/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-mysql">About MySQL</h1>
+<p>The previous example is a lite databases. We now move over to MySQL, the PHP database mother load.</p>
+<h2 id="what-is-mysql">What is MySQL?</h2>
 <blockquote>
-<p>Crossplatform JSON <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> : it will automatically use the optimized native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> if available. Use -D haxeJSON to force usage of the Haxe implementation even if a native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> is found : this will provide extra encoding features such as enums (replaced by their index) and StringMaps.</p>
+<p>MySQL is the world&apos;s most popular open source database. Whether you are a fast growing web property, technology ISV or large enterprise, MySQL can cost-effectively help you deliver high performance, scalable database applications. </p>
 </blockquote>
-<p>Some more information about json can be found on the classic <a href="http://www.w3schools.com/json/" target="_blank">http://www.w3schools.com/json/</a></p>
+<p><strong>Source: <a href="https://www.mysql.com/" target="_blank">https://www.mysql.com/</a></strong></p>
+<p>Or (because it&apos;s the first place you look for information):</p>
 <blockquote>
-<p>JSON: JavaScript Object Notation.</p>
-<p>JSON is a syntax for storing and exchanging data.</p>
-<p>JSON is an easier-to-use alternative to XML.</p>
+<p>MySQL is an open-source relational database management system (RDBMS);[6] in July 2013, it was the world&apos;s second most[a] widely used RDBMS, and the most widely used open-source client&#x2013;server model RDBMS.[9] </p>
 </blockquote>
-<h2 id="what-is-json">What is JSON?</h2>
-<ul>
-<li>JSON stands for JavaScript Object Notation</li>
-<li>JSON is a lightweight data-interchange format</li>
-<li>JSON is language independent *</li>
-<li>JSON is &quot;self-describing&quot; and easy to understand</li>
-</ul>
-<h2 id="json-values">JSON Values</h2>
-<p>JSON values can be:</p>
-<ul>
-<li>A number (integer or floating point)</li>
-<li>A string (in double quotes)</li>
-<li>A Boolean (true or false)</li>
-<li>An array (in square brackets)</li>
-<li>An object (in curly braces)</li>
-<li>A null</li>
-</ul>
-<pre><code>{
-    &quot;number&quot; : 0,
-    &quot;string&quot; : &quot;foobar&quot;,
-    &quot;bool&quot; : true,
-    &quot;array&quot; : [&quot;one&quot;,&quot;two&quot;],
-    &quot;object&quot; : {
-        &quot;firstName&quot;:&quot;John&quot;, 
-        &quot;lastName&quot;:&quot;Doe&quot;
-    },
-    &quot;null&quot; : null
-}
-</code></pre>
+<p><strong>Source: <a href="https://en.wikipedia.org/wiki/MySQL" target="_blank">https://en.wikipedia.org/wiki/MySQL</a></strong></p>
+<h2 id="spod-macros">SPOD Macros</h2>
+<p><strong>We use SPOD Macros for this, same as for SQLite </strong></p>
+<p>The Simple Persistent Objects Database Library (SPOD) is part of the standard Haxe distribution. It needs two classes <code>neko.db.Object</code> and <code>neko.db.Manager</code>. This Tutorial will explain how to use this library.</p>
+<p>Starting from Haxe 2.08 , a new version of SPOD called SPOD Macros is available. The principles are similar but SPOD Macros is more type safe and require less manual SQL writing. Please read the SPOD Macros documentation.
+But first, let&apos;s explain what SPOD is doing. With SPOD, you can define some Classes that will map to your database tables. You can then manipulate tables like objects, by simply modifying the table fields and calling a method to update the datas or delete the entry. For most of the standard stuff, you only need to provide some basic declarations and you don&apos;t have to write one single SQL statement. You can later extend SPOD by adding your own SQL requests for some application-specific stuff.</p>
+<blockquote>
+<p>The new SPOD Macros library is a replacement of the previous neko/php SPOD. The major enhancement in this version is that it is based on Macros, making it possible to write Haxe expressions directly instead of SQL, while keeping type-safety.</p>
+</blockquote>
+<p><a href="http://old.haxe.org/manual/spod" target="_blank">http://old.haxe.org/manual/spod</a></p>
+
                     
                     </section>
                 
@@ -918,10 +899,10 @@
         </div>
 
         
-        <a href="../06nasa/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
+        <a href="../10sqlite/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../08json/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
+        <a href="../11mysql/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

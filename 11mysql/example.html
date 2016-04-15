@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Example json | Haxe and PHP</title>
+        <title>How to | Haxe and PHP</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../08json/example.html" />
+    <link rel="next" href="../follow.html" />
     
     
-    <link rel="prev" href="../06nasa/example.html" />
+    <link rel="prev" href="../11mysql/about.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="11" data-basepath=".." data-revision="Fri Apr 15 2016 22:06:22 GMT+0200 (CEST)">
+    <div class="book" data-level="14.1" data-basepath=".." data-revision="Fri Apr 15 2016 22:06:22 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -499,7 +499,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="11" data-path="08json/about.html">
+        <li class="chapter " data-level="11" data-path="08json/about.html">
             
                 
                     <a href="../08json/about.html">
@@ -623,7 +623,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="14.1" data-path="11mysql/example.html">
+        <li class="chapter active" data-level="14.1" data-path="11mysql/example.html">
             
                 
                     <a href="../11mysql/example.html">
@@ -868,47 +868,152 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/08json/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-loading-a-json">About loading a json</h1>
-<p>A very common way of loading data in your web-app is the use of <code>json</code> files.</p>
-<p>Haxe can handle <a href="http://api.haxe.org/haxe/Json.html" target="_blank">json</a> cross-platform </p>
-<blockquote>
-<p>Crossplatform JSON <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> : it will automatically use the optimized native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> if available. Use -D haxeJSON to force usage of the Haxe implementation even if a native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> is found : this will provide extra encoding features such as enums (replaced by their index) and StringMaps.</p>
-</blockquote>
-<p>Some more information about json can be found on the classic <a href="http://www.w3schools.com/json/" target="_blank">http://www.w3schools.com/json/</a></p>
-<blockquote>
-<p>JSON: JavaScript Object Notation.</p>
-<p>JSON is a syntax for storing and exchanging data.</p>
-<p>JSON is an easier-to-use alternative to XML.</p>
-</blockquote>
-<h2 id="what-is-json">What is JSON?</h2>
-<ul>
-<li>JSON stands for JavaScript Object Notation</li>
-<li>JSON is a lightweight data-interchange format</li>
-<li>JSON is language independent *</li>
-<li>JSON is &quot;self-describing&quot; and easy to understand</li>
-</ul>
-<h2 id="json-values">JSON Values</h2>
-<p>JSON values can be:</p>
-<ul>
-<li>A number (integer or floating point)</li>
-<li>A string (in double quotes)</li>
-<li>A Boolean (true or false)</li>
-<li>An array (in square brackets)</li>
-<li>An object (in curly braces)</li>
-<li>A null</li>
-</ul>
-<pre><code>{
-    &quot;number&quot; : 0,
-    &quot;string&quot; : &quot;foobar&quot;,
-    &quot;bool&quot; : true,
-    &quot;array&quot; : [&quot;one&quot;,&quot;two&quot;],
-    &quot;object&quot; : {
-        &quot;firstName&quot;:&quot;John&quot;, 
-        &quot;lastName&quot;:&quot;Doe&quot;
-    },
-    &quot;null&quot; : null
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/11mysql/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="example-mysql-database">Example MySQL database</h1>
+<p>The previous example was a lite databases. We now move over to MySQL, the PHP database mother load.
+Almost all website running on PHP use MySQL.</p>
+<p>We will be using <a href="http://old.haxe.org/manual/spod" target="_blank">SPOD macros</a>.
+Check more info in the <a href="about.html">about</a>.</p>
+<p><em>The code used in this example is <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/11mysql/code" target="_blank">here</a>.</em></p>
+<h2 id="how-to-start">How to start</h2>
+<p>Create a folder named <strong><a href="../GLOSSARY.html#foobar" class="glossary-term" title="The terms foobar, fubar, or foo, bar, baz and qux (alternatively, quux) and sometimes norf and many others are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.">foobar</a></strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + bin
+    + src
+        - Main.hx
+    - php.hxml
+</code></pre><h2 id="the-main-hx">The Main.hx</h2>
+<p>This example is getting to big to post here, so if you want to check out the complete file go and check out <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/11mysql/code/Main.hx" target="_blank">Main.hx</a> </p>
+<p>First we need a database, so I wrote a class that creates one for you: <code>DBStart.hx</code>.
+This class generates random users.</p>
+<pre><code>    var cnx : sys.db.Connection;
+    if( !useMysql )
+        // Open a connection
+        cnx = sys.db.Sqlite.open(&quot;mybase.db&quot;);
+    else {
+        // Open a connection
+        cnx = sys.db.Mysql.connect({ 
+            host : &quot;localhost&quot;,
+            port : 3306,
+            database : &quot;MyDatabase&quot;,
+            user : &quot;root&quot;,
+            pass : &quot;&quot;,
+            socket : null
+        });
+    }
+
+    // Set as the connection for our SPOD manager
+    sys.db.Manager.cnx = cnx;
+
+    // initialize manager
+    sys.db.Manager.initialize();
+
+    // Create the &quot;user&quot; table
+    if ( !sys.db.TableCreate.exists(User.manager) ) {
+        sys.db.TableCreate.create(User.manager);
+    }
+
+    // Fill database with users
+    for (i in 0 ... 10) {
+        var user = createRandomUser();
+        user.insert();
+    }
+
+    // close the connection and do some cleanup
+    sys.db.Manager.cleanup();
+
+    // Close the connection
+    cnx.close();
+</code></pre><p>The function <code>createRandomUser()</code> does what you would expect, if you want to know, check the source code.</p>
+<p>A user!<br>We have used a <code>typedef</code> before, this looks similar.<br>The strange stuff here are the types, they are not the default types that Haxe uses.<br>Read more about that: <a href="http://old.haxe.org/manual/spod#creating-a-spod" target="_blank">creating-a-spod</a>.</p>
+<pre><code>import sys.db.Types;
+
+class User extends sys.db.Object {
+    public var id : SId;
+    public var name : SString&lt;32&gt;;
+    public var birthday : SDate;
+    public var phoneNumber : SNull&lt;SText&gt;;
 }
-</code></pre>
+</code></pre><p>Now we have a database, lets check out the code to get the data from the database:</p>
+<p><code>Main.hx</code></p>
+<pre><code>    // initialize the connection
+    var useMysql = true;
+    var isDummyData = false;
+
+    // check if file exists
+    if(!useMysql){
+        if ( ! sys.FileSystem.exists ( &quot;mybase.ddb&quot; ) ){
+            // init SQlite database 
+            new DBStart(useMysql);
+        } 
+    } else {
+        new DBStart(useMysql);
+    }
+
+    var cnx : sys.db.Connection;
+    if( !useMysql )
+        // Open a connection
+        cnx = sys.db.Sqlite.open(&quot;mybase.db&quot;);
+    else {
+        // Open a connection
+        cnx = sys.db.Mysql.connect({ 
+            host : &quot;localhost&quot;,
+            port : 3306,
+            database : &quot;MyDatabase&quot;,
+            user : &quot;root&quot;,
+            pass : &quot;&quot;,
+            socket : null
+        });
+    }
+
+    // Set as the connection for our SPOD manager
+    sys.db.Manager.cnx = cnx;
+
+    // initialize manager
+    sys.db.Manager.initialize();
+
+    // for (i in 0 ... User.manager.all().length) {
+    //  var _user = User.manager.get(i);        
+    //  if(_user != null) trace(_user.name);
+    // }    
+
+    createList();
+
+    // close the connection and do some cleanup
+    sys.db.Manager.cleanup();
+
+    // Close the connection
+    cnx.close();
+</code></pre><h2 id="the-haxe-build-file-php-hxml">The Haxe build file, php.<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a></h2>
+<p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
+Set these arguments into a text file of one per line with the extension <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>. This file passes it directly to the Haxe compiler as a build script.</p>
+<pre><code># // php.hxml
+-cp src
+-main Main
+-php bin/www
+-dce full
+</code></pre><h2 id="build-php-with-haxe">Build PHP with Haxe</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a></li>
+<li>Open the correct folder with <code>cd</code> where you have saved the <code>php.hxml</code> </li>
+<li>Type <code>haxe php.hxml</code></li>
+<li>Press enter</li>
+</ol>
+<p>And if everything went according to plan, you should see something similar like this:</p>
+<p><img src="screenshot.png" alt=""></p>
+<p>You could build everything directly in the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a>.</p>
+<pre><code>haxe -cp src -main Main -php bin/www -dce full
+</code></pre><p>It will have the same result</p>
+<h2 id="more-info">More info</h2>
+<ul>
+<li><a href="http://api.haxe.org/sys/db/Sqlite.html" target="_blank">http://api.haxe.org/sys/db/Sqlite.html</a></li>
+<li><a href="http://old.haxe.org/doc/neko/spod" target="_blank">http://old.haxe.org/doc/neko/spod</a></li>
+<li><a href="http://old.haxe.org/manual/spod" target="_blank">http://old.haxe.org/manual/spod</a></li>
+</ul>
+
                     
                     </section>
                 
@@ -918,10 +1023,10 @@
         </div>
 
         
-        <a href="../06nasa/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
+        <a href="../11mysql/about.html" class="navigation navigation-prev " aria-label="Previous page: Example MySQL"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../08json/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
+        <a href="../follow.html" class="navigation navigation-next " aria-label="Next page: Who to follow"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
