@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="10" data-basepath=".." data-revision="Fri Apr 08 2016 19:29:06 GMT+0200 (CEST)">
+    <div class="book" data-level="10" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick install
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter " data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter " data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -695,6 +710,21 @@
             
         </li>
     
+        <li class="chapter " data-level="17" >
+            
+                
+                    <a target="_blank" href="https:/github.com/MatthijsKamstra/haxephp/issues/">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Suggestion Box
+                    </a>
+            
+            
+        </li>
+    
 
 
         
@@ -802,19 +832,20 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/06nasa/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="nasa-api">NASA API</h1>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/06nasa/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="nasa-api">NASA <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a></h1>
 <p>If you want to access the information on a website you will need to register yourself as a developer.
 With that key you can get the information you want.</p>
 <p>They do that, because they want to check what you are doing with that information...</p>
-<p>Usually the api-key is not transfarable, and if I would put it up here, I would break the agreement I made with that perticular company.
-So that is bad news for the Ajax calls I want to show.</p>
-<p>So I started looking for an API that could be use <em>without</em> having API-KEY.</p>
+<p>The <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">api</a>-key is not transferable. And if I would put it up here, I would break the agreement I made with that particular company.
+That is bad news for the Ajax calls I want to show.</p>
+<p>I started looking for an <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> that could be use <em>without</em> having <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a>-KEY.</p>
 <p>I found it at <a href="https://api.nasa.gov/api.html" target="_blank">NASA</a></p>
 <blockquote>
-<p>You do not need to authenticate in order to explore the NASA data. </p>
+<p>You do not need to authenticate to explore the NASA data. </p>
 </blockquote>
 <h2 id="demo-key-rate-limits">DEMO_KEY Rate Limits</h2>
-<p>In documentation examples, the special DEMO_KEY api key is used. This API key can be used for initially exploring APIs prior to signing up, but it has much lower rate limits, so you&#x2019;re encouraged to signup for your own API key if you plan to use the API (signup is quick and easy). The rate limits for the DEMO_KEY are:</p>
+<p>In documentation examples, we use the special DEMO_KEY <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">api</a> key.
+This <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> key can be used for initially exploring APIs prior to signing up. But it has much lower rate limits, so you&apos;re encouraged to signup for your own <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> key if you plan to use the <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> (sign-up is quick and easy). The rate limits for the DEMO_KEY are:</p>
 <ul>
 <li>Hourly Limit: 30 requests per IP address per hour</li>
 <li>Daily Limit: 50 requests per IP address per day</li>
@@ -822,13 +853,13 @@ So that is bad news for the Ajax calls I want to show.</p>
 <h2 id="more-easy-to-access-data-from-nasa">More, easy to access, data from NASA</h2>
 <p>I used the <a href="https://api.nasa.gov/api.html#apod" target="_blank">APOD</a> but there is more:</p>
 <ul>
-<li><a href="https://api.nasa.gov/api.html#apod" target="_blank">APOD</a> : beautifull images from space</li>
-<li><a href="https://api.nasa.gov/api.html#earth" target="_blank">Earth</a> : images of earth taken from NASA satelites, with intervals of 16 days</li>
-<li><a href="https://api.nasa.gov/api.html#earth-temperature-anomalies" target="_blank">Earth temperature anomalies</a> : tempuratures on a specific place starting 1880</li>
+<li><a href="https://api.nasa.gov/api.html#apod" target="_blank">APOD</a> : beautiful images from space</li>
+<li><a href="https://api.nasa.gov/api.html#earth" target="_blank">Earth</a> : images of earth taken from NASA satellites, with intervals of 16 days</li>
+<li><a href="https://api.nasa.gov/api.html#earth-temperature-anomalies" target="_blank">Earth temperature anomalies</a> : temperatures on a specific place starting 1880</li>
 <li><a href="https://api.nasa.gov/api.html#patents" target="_blank">Patents</a> : The NASA patent portfolio</li>
-<li><a href="https://api.nasa.gov/api.html#sounds" target="_blank">Sounds</a> : Sounds from space!!! (beta)</li>
+<li><a href="https://api.nasa.gov/api.html#sounds" target="_blank">Sounds</a> : Sounds from space!!! (Beta)</li>
 </ul>
-<p>Just keep in mind that there is a limit and if you want to exceed that limit you should ask for a api-key.</p>
+<p>Just keep in mind that there is a limit and if you want to exceed that limit you should ask for a <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">api</a>-key.</p>
 
                     
                     </section>

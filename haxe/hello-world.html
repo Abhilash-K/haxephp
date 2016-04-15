@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2.3" data-basepath=".." data-revision="Fri Apr 08 2016 19:29:06 GMT+0200 (CEST)">
+    <div class="book" data-level="2.4" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick install
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter " data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter active" data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -695,6 +710,21 @@
             
         </li>
     
+        <li class="chapter " data-level="17" >
+            
+                
+                    <a target="_blank" href="https:/github.com/MatthijsKamstra/haxephp/issues/">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Suggestion Box
+                    </a>
+            
+            
+        </li>
+    
 
 
         
@@ -804,27 +834,42 @@
                     
                         <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/haxe/hello-world.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="hello-world"><a href="../GLOSSARY.html#hello_world" class="glossary-term" title="A &quot;Hello, World!&quot; program is a computer program that outputs &quot;Hello, World!&quot; (or some variant thereof) on a display device.">Hello world</a></h1>
 <p><img src="../img/helloworld.png" alt=""></p>
-<p>Developing JavaScript code is really easy with Haxe. Let&apos;s see our first HelloWorld example :</p>
+<p>Developing JavaScript code is easy with Haxe. Let&apos;s see our first HelloWorld example :</p>
 <pre><code>class Test {
     static function main() {
         trace(&quot;Hello World !&quot;);
     }
 }
-</code></pre><p>Put this class into a file named <code>Test.hx</code> and create the file <code>compile.hxml</code> in the same directory with the following content :</p>
-<pre><code>-php www
+</code></pre><p>Put this class into a file named <code>Test.hx</code> and create the file <code>compile.hxml</code> in the same directory with the following content:</p>
+<pre><code>-js test.js
 -main Test
 </code></pre><p>To compile open you <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
-Alternative names for the terminal:  ">terminal</a> and type</p>
+Alternative names for the terminal:  ">terminal</a> and type:</p>
 <pre><code>cd 
 </code></pre><p>And drag the folder where you saved the files, into the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
 Alternative names for the terminal:  ">terminal</a>.
-It will look something like this</p>
+It will look something like this:</p>
 <pre><code>cd /path/to/folder/
-</code></pre><p>press enter and type</p>
+</code></pre><p>Press enter and type:</p>
 <pre><code>haxe compile.hxml
-</code></pre><p>If an error occurs, it will be displayed. </p>
-<p>If everything goes well, it should create a directory <code>www</code> that contains the generated files. You can configure your webserver to point at the www folder to see the PHP code in action.</p>
-<p>Try <a href="https://www.mamp.info/en/" target="_blank">MAMP</a> of <a href="http://www.ampps.com/" target="_blank">AMPPS</a>for example</p>
+</code></pre><p>If an error occurs, the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a> will display that. 
+If everything went smoothly like it should, this will produce a <code>test.js</code> file that can be embedded into an HTML page such as this one :</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Haxe JS&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;test.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ol>
+<li>Put this code into a <code>test.html</code> file.</li>
+<li>Open it with your browser (like Google Chrome)</li>
+<li>It will display <strong><a href="../GLOSSARY.html#hello_world" class="glossary-term" title="A &quot;Hello, World!&quot; program is a computer program that outputs &quot;Hello, World!&quot; (or some variant thereof) on a display device.">Hello World</a></strong> in your Console.  </li>
+<li>(Google Chrome &gt; Hamburger menu &gt; More Tools &gt; Developers tools) </li>
+</ol>
+<p><em>Based upon <a href="http://old.haxe.org/doc/start/js" target="_blank">old.haxe.org - manual</a></em></p>
 
                     
                     </section>

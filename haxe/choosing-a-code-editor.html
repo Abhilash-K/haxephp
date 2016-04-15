@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2.2" data-basepath=".." data-revision="Fri Apr 08 2016 19:29:06 GMT+0200 (CEST)">
+    <div class="book" data-level="2.3" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick install
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter active" data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter " data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -695,6 +710,21 @@
             
         </li>
     
+        <li class="chapter " data-level="17" >
+            
+                
+                    <a target="_blank" href="https:/github.com/MatthijsKamstra/haxephp/issues/">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Suggestion Box
+                    </a>
+            
+            
+        </li>
+    
 
 
         
@@ -803,29 +833,46 @@
                     <section class="normal" id="section-">
                     
                         <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/haxe/choosing-a-code-editor.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="choosing-a-code-editor">Choosing a Code Editor</h1>
-<p>Once Haxe has been installed, it is helpful to choose an integrated development environment (IDE) with good support for Haxe and OpenFL development.</p>
-<p>Although you can write code using even a simple text editor, a quality IDE can provide code completion (code hints), shortcuts to build and test your projects, and other tools to give you a great coding experience.</p>
-<h2 id="flashdevelop">FlashDevelop</h2>
-<p><img src="http://flashdevelop.org/wikidocs/images/tour/0a-interface.png" alt=""></p>
-<p><a href="http://www.flashdevelop.org" target="_blank">FlashDevelop</a> is one of the strongest IDEs for Haxe development. If you are a Windows user (and perhaps if you are not), we recommend that you try FlashDevelop first to get a feel for what an integrated environment looks like. Many developers prefer FlashDevelop.</p>
-<p>FlashDevelop is free and open-source.</p>
+<p>Once Haxe has been <a href="installation.html">installed</a> (yes you should do that first!). It is helpful to choose an integrated development environment (<a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a>), with good support for Haxe and OpenFL development.</p>
+<p>Although you can write code using even a simple text editor. 
+A quality <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a> can provide:</p>
+<ul>
+<li>code completion (code hints)</li>
+<li>shortcuts to build and test your projects</li>
+<li>and other tools to give you a great coding experience.</li>
+</ul>
+<h2 id="haxedevelop">HaxeDevelop</h2>
+<p><img src="http://haxedevelop.org/img/haxedevelop-interface.jpg" alt=""></p>
+<p><a href="http://www.haxedevelop.org" target="_blank">HaxeDevelop</a> is one of the strongest IDEs for Haxe development. If you are a Windows user (and perhaps if you are not), we recommend that you try HaxeDevelop first.
+HaxeDevelop is a great developer <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a> with:</p>
+<ul>
+<li>integrated source-control support (svn, git, mercurial)</li>
+<li>tasks/todo, snippets</li>
+<li>plugin support</li>
+<li>XML/HTML/CSS completion</li>
+<li>built-in zen-coding for HTML</li>
+</ul>
+<p>Haxe developers prefer HaxeDevelop.</p>
+<p>HaxeDevelop is free and open-source.</p>
 <h2 id="sublime-text">Sublime Text</h2>
 <p><img src="http://www.sublimetext.com/screenshots/alpha_ui_large.png" alt=""></p>
 <p><a href="http://www.sublimetext.com" target="_blank">Sublime Text</a> is a code editor, with support for Haxe using the <a href="https://github.com/clemos/haxe-sublime-bundle" target="_blank">Haxe Sublime Bundle</a>. Sublime Text is cross-platform, with support for Windows, Mac and Linux.</p>
-<p>Unlike FlashDevelop, Sublime Text does not provide accurate code completion, nor does it support &quot;projects&quot; in the traditional IDE sense. However, Sublime Text is much stronger than a simple text editor, and is a good recommendation for Mac and Linux users.</p>
+<p>Sublime Text does not provide accurate code completion. Nor does it support &quot;projects&quot; in the traditional <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a> sense. But, yet, Sublime Text is much stronger than a simple text editor, and is a good recommendation for Mac and Linux users.</p>
 <p>Sublime Text is free-to-use, with reminders to pay for continued use.</p>
 <h2 id="intellij-idea">IntelliJ IDEA</h2>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/IntelliJ_IDEA_12.0.4_Ultimate.jpg" alt=""></p>
-<p><a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is primarily marketed as a Java IDE, but it has growing support within the Haxe community, including large teams, such as TiVo. The full edition, as well as the free community edition, support the <a href="https://plugins.jetbrains.com/plugin/6873?pr=idea" target="_blank">Haxe plugin</a>, which is not easy to install, but can provide a fuller native IDE experience for Mac or Linux users.</p>
+<p><a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is primarily marketed as a Java <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a>. But it has growing support within the Haxe community, including large teams, such as TiVo. The full edition and the free community edition, support the <a href="https://plugins.jetbrains.com/plugin/6873?pr=idea" target="_blank">Haxe plugin</a>, which is not easy to install. But can provide a fuller native <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a> experience for Mac or Linux users.</p>
 <h2 id="atom">Atom</h2>
-<p><img src="http://kerrygallagher.co.uk/content/images/2014/Mar/Screenshot_2014_03_01_10_58_06.png" alt=""></p>
-<p><a href="https://atom.io/" target="_blank">Atom</a> A hackable text editor
-for the 21st Century.<br>Atom is a text editor that&apos;s modern, approachable, yet hackable to the core&#x2014;a tool you can customize to do anything but also use productively without ever touching a config file.</p>
+<p><img src="https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/screenshot-main-80d8c9841da6ed11c9d87f31136a4ca9.png" alt=""></p>
+<p><a href="https://atom.io/" target="_blank">Atom</a> A hack-able text editor for the 21st Century.  </p>
+<blockquote>
+<p>Atom is a text editor that&apos;s modern, approachable, yet hackable to the core&#x2014;a tool you can customize to do anything but also use productively without ever touching a config file.</p>
+</blockquote>
 <h2 id="brackets">Brackets</h2>
 <p><img src="https://raw.githubusercontent.com/Brackets-Themes/80sBaby/master/screenshots/css.png" alt=""></p>
 <p><a href="http://brackets.io/" target="_blank">Brackets</a> is a lightweight, yet powerful, modern text editor. We blend visual tools into the editor so you get the right amount of help when you want it.</p>
 <h2 id="visual-studio-code">Visual Studio Code</h2>
-<p><img src="https://code.visualstudio.com/Content/images/hero-osx.png" alt=""></p>
+<p><img src="https://code.visualstudio.com/home-screenshot-mac-lg.png" alt="Visual Studio Code"></p>
 <p><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.</p>
 <h2 id="other-choices">Other Choices</h2>
 <p>There are other code editors to choose from, include vim and up-and-coming Haxe-based editors. You can read more at <a href="http://haxe.org/documentation/introduction/editors-and-ides.html" target="_blank">http://haxe.org/documentation/introduction/editors-and-ides.html</a></p>
@@ -842,7 +889,7 @@ for the 21st Century.<br>Atom is a text editor that&apos;s modern, approachable,
 </thead>
 <tbody>
 <tr>
-<td>FlashDevelop</td>
+<td>HaxeDevelop</td>
 <td>Windows<code>*</code></td>
 <td>Free</td>
 <td>Open Source</td>
@@ -881,11 +928,11 @@ for the 21st Century.<br>Atom is a text editor that&apos;s modern, approachable,
 <td>Windows, Mac, Linux</td>
 <td>Free</td>
 <td>?</td>
-<td><code>***</code></td>
+<td><a href="https://marketplace.visualstudio.com/items?itemName=haxedevs.haxe" target="_blank">vscode-haxe</a></td>
 </tr>
 </tbody>
 </table>
-<p><code>*</code> there is a way to get it partially working on Mac, but I failed.<br><code>**</code> it will ask you to pay for a license<br><code>***</code> plugin not ready (yet, <a href="https://twitter.com/Jeff__Ward/status/677725911123390464" target="_blank">Jeff Ward</a> is working on it)  </p>
+<p><code>*</code> there is a way to get it partially working on Mac, but I failed.<br><code>**</code> it will ask you to pay for a license</p>
 <p><em>Some of this information is directly from <a href="http://www.openfl.org/learn/resources/choosing-a-code-editor/" target="_blank">Openfl documentation</a></em></p>
 
                     

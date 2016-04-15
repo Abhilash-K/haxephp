@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3" data-basepath=".." data-revision="Fri Apr 08 2016 19:29:06 GMT+0200 (CEST)">
+    <div class="book" data-level="3" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick install
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter " data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter " data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -695,6 +710,21 @@
             
         </li>
     
+        <li class="chapter " data-level="17" >
+            
+                
+                    <a target="_blank" href="https:/github.com/MatthijsKamstra/haxephp/issues/">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Suggestion Box
+                    </a>
+            
+            
+        </li>
+    
 
 
         
@@ -814,8 +844,26 @@ It was create by Franco Ponticelli and added to the Haxe compiler in 2008.</p>
 <h2 id="spares-information-about-php-on-haxe-org">Spares information about PHP on Haxe.org</h2>
 <p><a href="http://haxe.org/manual/target-php-getting-started.html" target="_blank">http://haxe.org/manual/target-php-getting-started.html</a></p>
 <h2 id="convert-php-to-haxe">Convert PHP to Haxe</h2>
-<p>PhpToHaxe - tool for helping use php from haxe</p>
+<p>PhpToHaxe - tool for helping use PHP from Haxe</p>
 <p><a href="http://phptohaxe.haqteam.com/code.php" target="_blank">http://phptohaxe.haqteam.com/code.php</a></p>
+<h2 id="neko">Neko?</h2>
+<p>In the source you will see this <code>conditional compiler</code> statement</p>
+<pre><code>#if php
+import php.Lib;
+import php.Web;
+#elseif neko
+import neko.Lib;
+import neko.Web;
+#end
+</code></pre><h3 id="what-is-that-neko">What is that <code>neko</code>?</h3>
+<blockquote>
+<p>Neko is a high-level dynamically typed programming language.</p>
+</blockquote>
+<p>Note that the <code>php</code> package tries to mimic as far as possible the <code>neko</code> one. This allows for easy switching between the two platforms</p>
+<p><a href="http://api.haxe.org/neko/" target="_blank">neko api</a></p>
+<h2 id="an-introduction-to-mod-neko">An Introduction to Mod_neko</h2>
+<p><code>Mod_neko</code> is an Apache module for Neko. This means it&apos;s possible to run Neko programs on the server side to serve web-pages using Apache. Here&apos;s a step-by-step tutorial on how to configure and use Mod_neko.</p>
+<p>Read more <a href="http://nekovm.org/doc/mod_neko" target="_blank">Mod_neko</a>.</p>
 
                     
                     </section>

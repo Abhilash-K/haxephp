@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="11" data-basepath=".." data-revision="Fri Apr 08 2016 19:29:06 GMT+0200 (CEST)">
+    <div class="book" data-level="11" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick install
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter " data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter " data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -695,6 +710,21 @@
             
         </li>
     
+        <li class="chapter " data-level="17" >
+            
+                
+                    <a target="_blank" href="https:/github.com/MatthijsKamstra/haxephp/issues/">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Suggestion Box
+                    </a>
+            
+            
+        </li>
+    
 
 
         
@@ -804,11 +834,45 @@
                     
                         <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/08json/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-loading-a-json">About loading a json</h1>
 <p>A very common way of loading data in your web-app is the use of <code>json</code> files.</p>
-<p>Haxe can handle <a href="http://api.haxe.org/haxe/Json.html" target="_blank">json</a> crossplatform </p>
+<p>Haxe can handle <a href="http://api.haxe.org/haxe/Json.html" target="_blank">json</a> cross-platform </p>
 <blockquote>
-<p>Crossplatform JSON API : it will automatically use the optimized native API if available. Use -D haxeJSON to force usage of the Haxe implementation even if a native API is found : this will provide extra encoding features such as enums (replaced by their index) and StringMaps.</p>
+<p>Crossplatform JSON <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> : it will automatically use the optimized native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> if available. Use -D haxeJSON to force usage of the Haxe implementation even if a native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> is found : this will provide extra encoding features such as enums (replaced by their index) and StringMaps.</p>
 </blockquote>
-
+<p>Some more information about json can be found on the classic <a href="http://www.w3schools.com/json/" target="_blank">http://www.w3schools.com/json/</a></p>
+<blockquote>
+<p>JSON: JavaScript Object Notation.</p>
+<p>JSON is a syntax for storing and exchanging data.</p>
+<p>JSON is an easier-to-use alternative to XML.</p>
+</blockquote>
+<h2 id="what-is-json">What is JSON?</h2>
+<ul>
+<li>JSON stands for JavaScript Object Notation</li>
+<li>JSON is a lightweight data-interchange format</li>
+<li>JSON is language independent *</li>
+<li>JSON is &quot;self-describing&quot; and easy to understand</li>
+</ul>
+<h2 id="json-values">JSON Values</h2>
+<p>JSON values can be:</p>
+<ul>
+<li>A number (integer or floating point)</li>
+<li>A string (in double quotes)</li>
+<li>A Boolean (true or false)</li>
+<li>An array (in square brackets)</li>
+<li>An object (in curly braces)</li>
+<li>A null</li>
+</ul>
+<pre><code>{
+    &quot;number&quot; : 0,
+    &quot;string&quot; : &quot;foobar&quot;,
+    &quot;bool&quot; : true,
+    &quot;array&quot; : [&quot;one&quot;,&quot;two&quot;],
+    &quot;object&quot; : {
+        &quot;firstName&quot;:&quot;John&quot;, 
+        &quot;lastName&quot;:&quot;Doe&quot;
+    },
+    &quot;null&quot; : null
+}
+</code></pre>
                     
                     </section>
                 

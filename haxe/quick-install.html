@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>How to | Haxe and PHP</title>
+        <title>Quick install | Haxe and PHP</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../09flatfile/about.html" />
+    <link rel="next" href="../haxe/installation.html" />
     
     
-    <link rel="prev" href="../08json/about.html" />
+    <link rel="prev" href="../haxe/about.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="11.1" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
+    <div class="book" data-level="2.1" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,7 +101,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+        <li class="chapter active" data-level="2.1" data-path="haxe/quick-install.html">
             
                 
                     <a href="../haxe/quick-install.html">
@@ -515,7 +515,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="11.1" data-path="08json/example.html">
+        <li class="chapter " data-level="11.1" data-path="08json/example.html">
             
                 
                     <a href="../08json/example.html">
@@ -832,85 +832,159 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/08json/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="example-json">Example json</h1>
-<p>I have created the <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/08json/code/bin/www/assets/users.json" target="_blank">user.json</a> with <a href="http://jsonplaceholder.typicode.com/users" target="_blank">http://jsonplaceholder.typicode.com/users</a>.</p>
-<p>Check the <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/08json/code" target="_blank">code folder</a> for more comments.</p>
-<p>In this example we are going to read and use a <code>.json</code> file.</p>
-<h2 id="how-to-start">How to start</h2>
-<p>Create a folder named <strong><a href="../GLOSSARY.html#foobar" class="glossary-term" title="The terms foobar, fubar, or foo, bar, baz and qux (alternatively, quux) and sometimes norf and many others are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.">foobar</a></strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
-See example below:</p>
-<pre><code>+ foobar
-    + bin
-    + src
-        - Main.hx
-    - php.hxml
-</code></pre><h2 id="the-main-hx">The Main.hx</h2>
-<p>This example is too big to post here, so if you want to check out the complete file visit <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/08json/code/Main.hx" target="_blank">Main.hx</a> </p>
-<p>So the first part of this code is loading the <code>json</code> file:</p>
-<pre><code>var path = Sys.getCwd() + &apos;/assets/users.json&apos;;
-
-if(sys.FileSystem.exists(path)){
-    var str : String = sys.io.File.getContent(path);
-} else {
-    trace (&apos;ERROR: there is not file: $path&apos;);
-}
-</code></pre><p>convert data (String) to a <code>json</code> file:
-<a href="http://api.haxe.org/haxe/Json.html" target="_blank">http://api.haxe.org/haxe/Json.html</a></p>
-<pre><code>    // trace(&apos;str: $str&apos;);
-    json = haxe.Json.parse(str);
-</code></pre><p>And then it&apos;s possible to convert the <code>json</code> to usable input:</p>
-<pre><code>for (i in 0 ... json.length)
-{
-    var _user = json[i];
-    trace ( &quot;Name: &quot; + _user.name );
-}
-</code></pre><p>To make that easier I use <a href="http://haxe.org/manual/type-system-typedef.html" target="_blank"><code>typedef</code></a></p>
-<p>We convert the json data to <code>User</code> so when we use a <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a> it will use autocompletion</p>
-<pre><code>typedef User = 
-{
-    var id : Int; // 1
-    var name : String; // Leanne Graham
-    var username : String; // Bret
-    var email : String; // Sincere@april.biz
-    var address : {
-          var street : String; // Kulas Light
-          var suite : String; // Apt. 556
-          var city : String; // Gwenborough
-          var zipcode : String; // 92998-3874
-          var geo : {
-            var lat : String; // -37.3159
-            var lng : String; // 81.1496
-          };
-    };
-    var phone : String; // 1-770-736-8031 x56442
-    var website : String; // hildegard.org
-    var company : {
-          var name : String; // Romaguera-Crona
-          var catchPhrase : String; // Multi-layered client-server neural-net
-          var bs : String; // harness real-time e-markets
-    };
-}
-</code></pre><h2 id="the-haxe-build-file-php-hxml">The Haxe build file, php.<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a></h2>
-<p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
-These arguments can also be placed into a text file of one per line with the extension <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>. This file can then be passed directly to the Haxe compiler as a build script.</p>
-<pre><code># // php.hxml
--cp src
--main Main
--php bin/www
--dce full
-</code></pre><h2 id="build-js-with-haxe">Build js with Haxe</h2>
-<p>To finish and see what we have, build the file and see the result</p>
-<ol>
-<li>Open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
-Alternative names for the terminal:  ">terminal</a></li>
-<li><code>cd</code> to the correct folder where you have saved the <code>php.hxml</code> </li>
-<li>type <code>haxe php.hxml</code></li>
-<li>press enter</li>
-</ol>
-<p>You could build everything directly in the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
-Alternative names for the terminal:  ">terminal</a>.</p>
-<pre><code>haxe -cp src -main Main -php bin/www -dce full
-</code></pre><p>It will have the same result</p>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/haxe/quick-install.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="quick-install">Quick install</h1>
+<p>This tutorial is for the TL;DR crowd...
+You just want to get started ... right!</p>
+<p><img src="../img/tldr.gif" alt=""></p>
+<p>Choose your OS:</p>
+<ul>
+<li><a href="#osx">OSX</a></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#windows">Windows</a> </li>
+</ul>
+<p><strong>At the time of writing, the version is Haxe 3.2.1, but don&apos;t let that stop you when that has changed</strong></p>
+<p><a name="osx"></a></p>
+<h1 id="osx">OSX</h1>
+<h2 id="step-0-you-have-joined-an-elite-haxe-force">Step 0: You have joined an elite Haxe force!</h2>
+<p>You are cooler then a polar bear!</p>
+<h2 id="step-1-install-haxe">Step 1: Install Haxe</h2>
+<p>You can find installers and binaries for Windows, OS X and Linux on <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a>.</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-2-install-editor">Step 2: Install Editor</h2>
+<p>You need an editor, lets install <strong>Visual Studio Code</strong></p>
+<p><img src="https://code.visualstudio.com/home-screenshot-mac-lg.png" alt="Visual Studio Code"></p>
+<p>On the homepage of <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> find the button called &quot;Download for OSX&quot; (it right in your face, big button).</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-3-install-vscode-haxe-language-extension">Step 3: Install VSCode - Haxe Language Extension</h2>
+<p>To get VSCode working with Haxe you need to install the &quot;Haxe Language Extension&quot;</p>
+<p>(<a href="https://marketplace.visualstudio.com/items?itemName=haxedevs.haxe" target="_blank">vscode-haxe</a>)</p>
+<ul>
+<li>Launch VS Code</li>
+<li>Quick Open (&#x2318;+P)</li>
+<li>Paste the following command: <code>ext install haxe</code></li>
+<li>And type enter</li>
+</ul>
+<h2 id="step-4-extra-install-haxelib-libraries">Step 4 (extra): Install haxelib libraries</h2>
+<p>This is not necessary but something you eventually need to do.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following</li>
+</ul>
+<pre><code>haxelib install hxnodejs
+haxelib install jQueryExtern
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git haxelib
+haxelib install markdown
+haxelib install msignal
+</code></pre><h2 id="step-5-extra-install-npm-node-js">Step 5 (Extra): Install NPM/Node.js</h2>
+<p>Download Node.js: get your version here: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<p>Now you have access to NPM.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following (and see current NPM version)</li>
+</ul>
+<pre><code>npm -v
+</code></pre><p><a name="linux"></a></p>
+<h1 id="linux">Linux</h1>
+<h2 id="step-0-you-have-joined-an-elite-haxe-force">Step 0: You have joined an elite Haxe force!</h2>
+<p>You are cooler then a polar bear!</p>
+<h2 id="step-1-install-haxe">Step 1: Install Haxe</h2>
+<p>You can find installers and binaries for Windows, OS X and Linux on <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a>.</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-2-install-editor">Step 2: Install Editor</h2>
+<p>You need an editor, lets install <strong>Visual Studio Code</strong></p>
+<p><img src="https://code.visualstudio.com/home-screenshot-mac-lg.png" alt="Visual Studio Code"></p>
+<p>On the homepage of <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> find the button called &quot;Download&quot; (its right in your face, big button).</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-3-install-vscode-haxe-language-extension">Step 3: Install VSCode - Haxe Language Extension</h2>
+<p>To get VSCode working with Haxe you need to install the &quot;Haxe Language Extension&quot;</p>
+<p>(<a href="https://marketplace.visualstudio.com/items?itemName=haxedevs.haxe" target="_blank">vscode-haxe</a>)</p>
+<ul>
+<li>Launch VS Code</li>
+<li>Quick Open (&#x2318;+P)</li>
+<li>Paste the following command: <code>ext install haxe</code></li>
+<li>And type enter</li>
+</ul>
+<h2 id="step-4-extra-install-haxelib-libraries">Step 4 (extra): Install haxelib libraries</h2>
+<p>This is not necessary but something you eventually need to do.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following</li>
+</ul>
+<pre><code>haxelib install hxnodejs
+haxelib install jQueryExtern
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git haxelib
+haxelib install markdown
+haxelib install msignal
+</code></pre><h2 id="step-5-extra-install-npm-node-js">Step 5 (Extra): Install NPM/Node.js</h2>
+<p>Download Node.js: get your version here: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<p>Now you have access to NPM.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following (and see current NPM version)</li>
+</ul>
+<pre><code>npm -v
+</code></pre><p><a name="windows"></a></p>
+<h1 id="windows">Windows</h1>
+<h2 id="step-0-you-have-joined-an-elite-haxe-force">Step 0: You have joined an elite Haxe force!</h2>
+<p>You are cooler then a polar bear!</p>
+<h2 id="step-1-install-haxe">Step 1: Install Haxe</h2>
+<p>You can find installers and binaries for Windows, OS X and Linux on <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a>.</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-2-install-editor">Step 2: Install Editor</h2>
+<p>You need an <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a>, install <strong>HaxeDevelop</strong></p>
+<p><img src="http://haxedevelop.org/img/haxedevelop-interface.jpg" alt=""></p>
+<p>On the homepage of <a href="http://www.haxedevelop.org" target="_blank">HaxeDevelop</a> find the button called &quot;Download&quot; (its right in your face, big button).</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-3-extra-install-haxelib-libraries">Step 3 (extra): Install haxelib libraries</h2>
+<p>This is not necessary but something you eventually need to do.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following</li>
+</ul>
+<pre><code>haxelib install hxnodejs
+haxelib install jQueryExtern
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git haxelib
+haxelib install markdown
+haxelib install msignal
+</code></pre><h2 id="step-4-extra-install-npm-node-js">Step 4 (Extra): Install NPM/Node.js</h2>
+<p>Download Node.js: get your version here: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<p>Now you have access to NPM.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following (and see current NPM version)</li>
+</ul>
+<pre><code>npm -v
+</code></pre><hr>
 
                     
                     </section>
@@ -921,10 +995,10 @@ Alternative names for the terminal:  ">terminal</a>.</p>
         </div>
 
         
-        <a href="../08json/about.html" class="navigation navigation-prev " aria-label="Previous page: Example json"><i class="fa fa-angle-left"></i></a>
+        <a href="../haxe/about.html" class="navigation navigation-prev " aria-label="Previous page: Haxe basics"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../09flatfile/about.html" class="navigation navigation-next " aria-label="Next page: Example flat file"><i class="fa fa-angle-right"></i></a>
+        <a href="../haxe/installation.html" class="navigation navigation-next " aria-label="Next page: Installation"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

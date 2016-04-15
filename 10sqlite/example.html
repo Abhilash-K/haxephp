@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="13.1" data-basepath=".." data-revision="Fri Apr 08 2016 19:29:06 GMT+0200 (CEST)">
+    <div class="book" data-level="13.1" data-basepath=".." data-revision="Fri Apr 15 2016 21:06:09 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick install
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter " data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter " data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -695,6 +710,21 @@
             
         </li>
     
+        <li class="chapter " data-level="17" >
+            
+                
+                    <a target="_blank" href="https:/github.com/MatthijsKamstra/haxephp/issues/">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        Suggestion Box
+                    </a>
+            
+            
+        </li>
+    
 
 
         
@@ -804,7 +834,7 @@
                     
                         <a id="edit-link" href="https://github.com/MatthijsKamstra/haxephp/blob/master/10sqlite/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="example-sqlite-database">Example SQLite database</h1>
 <p>In a previous example we used a simple flat-file &apos;database&apos;.
-An SQLite database is really a database but the lite version. It&apos;s the local database for a lot of (mobile)apps.</p>
+An SQLite database is a database but the lite version. It&apos;s the local database for a lot of (mobile)apps.</p>
 <p>We will be using <a href="http://old.haxe.org/manual/spod" target="_blank">SPOD macros</a>
 Check more info in the <a href="about.html">about</a>.</p>
 <p><em>The code used in this example can be found <a href="https://github.com/MatthijsKamstra/haxephp/tree/master/10sqlite/code" target="_blank">here</a>.</em></p>
@@ -846,7 +876,7 @@ This class generates random users.</p>
     // Close the connection
     cnx.close();
 </code></pre><p>The function <code>createRandomUser()</code> does exactly what you would expect, if you really want to know, check the source code.</p>
-<p>So a user!<br>We have used a typedef before, this looks very simular.<br>The strange stuff here are the types, they are not the default types that Haxe uses.<br>Read more about that: <a href="http://old.haxe.org/manual/spod#creating-a-spod" target="_blank">creating-a-spod</a></p>
+<p>So a user!<br>We have used a typedef before, this looks very similar.<br>The strange stuff here are the types, they are not the default types that Haxe uses.<br>Read more about that: <a href="http://old.haxe.org/manual/spod#creating-a-spod" target="_blank">creating-a-spod</a></p>
 <pre><code>import sys.db.Types;
 
 class User extends sys.db.Object {
@@ -855,7 +885,7 @@ class User extends sys.db.Object {
     public var birthday : SDate;
     public var phoneNumber : SNull&lt;SText&gt;;
 }
-</code></pre><p>So now we have a database, lets check out the code to get the data from the database:</p>
+</code></pre><p>Now we have a database, lets check out the code to get the data from the database:</p>
 <p><code>Main.hx</code></p>
 <pre><code>    // Open a connection
     var cnx = sys.db.Sqlite.open(&quot;mybase.ddb&quot;);
@@ -890,8 +920,8 @@ These arguments can also be placed into a text file of one per line with the ext
 <li>Open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
 Alternative names for the terminal:  ">terminal</a></li>
 <li><code>cd</code> to the correct folder where you have saved the <code>php.hxml</code> </li>
-<li>type <code>haxe php.hxml</code></li>
-<li>press enter</li>
+<li>Type <code>haxe php.hxml</code></li>
+<li>Press enter</li>
 </ol>
 <p>And if everything went according to plan, you should see something simular like this:</p>
 <p><img src="screenshot.png" alt=""></p>
